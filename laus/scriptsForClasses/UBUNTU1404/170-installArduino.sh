@@ -31,6 +31,22 @@ usermod -a -G dialout worker
 apt-get -y install -f 
 apt-get remove -f modemmanager
 
+cd /usr/local/share/
+wget http://www.arduino.org/images/home/Arduino.png
+
+#finder entry and icon 
+echo "
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Arduino
+Comment=Arduino
+Exec=/usr/bin/arduino
+Icon=/usr/local/share/Arduino.png
+Terminal=false
+" >> /usr/share/applications/arduino.desktop
+
+
 #####S4A##############################################################
 # http://s4a.cat/
 cd /tmp
