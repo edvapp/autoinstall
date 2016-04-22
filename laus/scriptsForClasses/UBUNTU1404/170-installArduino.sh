@@ -11,8 +11,8 @@
 cd /tmp/
 wget http://download.arduino.org/IDE/1.7.10/arduino-1.7.10.org-linux64.tar.xz
 tar -xvf arduino-1.7.10.org-linux64.tar.xz
-cp /arduino-1.7.10-linux64 /usr/lib/arduino-1.7.10-linux64
-ln /usr/bin/arduino /usr/lib/arduino-1.7.10-linux64/arduino
+cp arduino-1.7.10-linux64 /usr/lib/arduino-1.7.10-linux64
+ln /usr/lib/arduino-1.7.10-linux64/arduino /usr/bin/arduino
 
 # manipulated file
 file=/etc/udev/rules.d/90-extraacl.rules
@@ -28,7 +28,8 @@ logFile $file
 usermod -a -G tty worker
 usermod -a -G dialout worker
 
-apt-get remove modemmanager
+apt-get -y install -f 
+apt-get remove -f modemmanager
 
 #####S4A##############################################################
 # http://s4a.cat/
@@ -37,7 +38,7 @@ wget http://vps34736.ovh.net/S4A/S4A16.deb
 
 dpkg --add-architecture i386
 apt-get update
-apt-get install ia32-libs
+apt-get -y install ia32-libs
 
 dpkg -i --force-architecture S4A16.deb
 
