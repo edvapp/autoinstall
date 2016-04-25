@@ -11,8 +11,8 @@
 cd /tmp/
 wget http://download.arduino.org/IDE/1.7.10/arduino-1.7.10.org-linux64.tar.xz
 tar -xvf arduino-1.7.10.org-linux64.tar.xz
-cp arduino-1.7.10-linux64 /usr/lib/arduino-1.7.10-linux64
-ln /usr/lib/arduino-1.7.10-linux64/arduino /usr/bin/arduino
+cp -r arduino-1.7.10-linux64 /usr/lib/arduino-1.7.10-linux64
+ln -s /usr/lib/arduino-1.7.10-linux64/arduino /usr/bin/arduino
 
 # manipulated file
 file=/etc/udev/rules.d/90-extraacl.rules
@@ -29,7 +29,7 @@ usermod -a -G tty worker
 usermod -a -G dialout worker
 
 apt-get -y install -f 
-apt-get remove -f modemmanager
+apt-get remove -y -f modemmanager
 
 cd /usr/local/share/
 wget http://www.arduino.org/images/home/Arduino.png
@@ -61,6 +61,7 @@ dpkg -i --force-architecture S4A16.deb
 
 ## bring Firmaware to desktop
 touch /home/worker/Schreibtisch/
+chmod worker.worker /home/worker/Schreibtisch/
 cd /home/worker/Schreibtisch/
 wget http://vps34736.ovh.net/S4A/S4AFirmware16.ino
 
