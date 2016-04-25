@@ -49,16 +49,18 @@ Terminal=false
 
 #####S4A##############################################################
 # http://s4a.cat/
-cd /tmp
-wget http://vps34736.ovh.net/S4A/S4A16.deb
-
 dpkg --add-architecture i386
 apt-get update
 apt-get -y install ia32-libs
 
+apt-get install -y -f libcairo2:i386 libdatrie1:i386 libgraphite2-3:i386 libharfbuzz0b:i386  libpango-1.0-0:i386 libpango1.0-0:i386 libpangocairo-1.0-0:i386  libpangoft2-1.0-0:i386 libpangox-1.0-0:i386 libpangoxft-1.0-0:i386  libpixman-1-0:i386 libthai0:i386 libxcb-render0:i386 libxcb-shm0:i386  libxft2:i386
+
+cd /tmp
+wget http://vps34736.ovh.net/S4A/S4A16.deb
 dpkg -i --force-architecture S4A16.deb
 
 ## bring Firmaware to desktop
+touch /home/worker/Schreibtisch/
 cd /home/worker/Schreibtisch/
 wget http://vps34736.ovh.net/S4A/S4AFirmware16.ino
 
