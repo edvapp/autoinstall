@@ -28,7 +28,6 @@ logFile $file
 usermod -a -G tty worker
 usermod -a -G dialout worker
 
-apt-get -y install -f 
 apt-get remove -y -f modemmanager
 
 cd /usr/local/share/
