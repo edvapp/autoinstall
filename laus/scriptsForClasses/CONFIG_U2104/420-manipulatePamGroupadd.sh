@@ -23,4 +23,4 @@ Auth:
 pam-auth-update --package --force my_groups
 
 
-systemctl restart nscd.service 
+#systemctl restart nscd.service 

@@ -49,43 +49,43 @@ echo "
 ## sec = krb5
 ## create config file for teachers BRG
 echo "
-*	-fstype=nfs4,sec=krb5	ad01fs1:/701036/l/&
+*	-fstype=nfs4,sec=krb5	ad01f1:/701036/l/&
 " > /etc/auto.users.701036.l
 
 ## create config file for teachers GfB
 echo "
-*	-fstype=nfs4,sec=krb5	ad01fs1:/701076/l/&
+*	-fstype=nfs4,sec=krb5	ad01f1:/701076/l/&
 " > /etc/auto.users.701076.l
 
 ## create config file for Verwaltung BRG
 echo "
-*	-fstype=nfs4,sec=krb5	ad01fs1:/701036/v/&
+*	-fstype=nfs4,sec=krb5	ad01f1:/701036/v/&
 " > /etc/auto.users.701036.v
 
 ## create config file for Verwaltung GfB
 echo "
-*	-fstype=nfs4,sec=krb5	ad01fs1:/701076/v/&
+*	-fstype=nfs4,sec=krb5	ad01f1:/701076/v/&
 " > /etc/auto.users.701076.v
 
 ## create config file for Testees BRG
 echo "
-*	-fstype=nfs4,sec=krb5	ad01fs1:/701036/t/&
+*	-fstype=nfs4,sec=krb5	ad01f1:/701036/t/&
 " > /etc/auto.users.701036.t
 
 ## create config file for Testees GfB
 echo "
-*	-fstype=nfs4,sec=krb5	ad01fs1:/701076/t/&
+*	-fstype=nfs4,sec=krb5	ad01f1:/701076/t/&
 " > /etc/auto.users.701076.t
 
 ## sec != krb5
 ## create config file for pupils BRG
 echo "
-*	-fstype=nfs4    	ad01fs1:/701036/s/&
+*	-fstype=nfs4    	ad01f1:/701036/s/&
 " > /etc/auto.users.701036.s
 
 ## create config file for pupils GfB
 echo "
-*	-fstype=nfs4    	ad01fs1:/701076/s/&
+*	-fstype=nfs4    	ad01f1:/701076/s/&
 " > /etc/auto.users.701076.s
 
 
