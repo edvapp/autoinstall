@@ -7,6 +7,7 @@ SAMBA4_DNS_DOMAIN_NAME="brg.tsn"
 SAMBA4_REALM_DOMAIN_NAME="BRG.TSN"
 SAMBA4_DOMAIN="BRG"
 SAMBA4_AD_DNS_STATIC_IP="10.0.0.19"
+#SAMBA4_TIMEZONE="Europe/Vienna"
 
 DOMAIN_JOIN_USER="domain_join_user"
 DOMAIN_JOIN_USER_PASSWORD="Passw0rd"
@@ -157,7 +158,7 @@ echo "
 " > ${file}
 
 ## CONNECT client via nsswitch.conf and winbind to domain ${SAMBA4_DOMAIN}
-file="/nsswitch.conf"
+file="/etc/nsswitch.conf"
 if ! [ -f ${file}".original" ];
 then
         cp ${file} ${file}".original"
@@ -181,6 +182,9 @@ systemctl disable nmbd
 
 ## enable automatic home-directory creation
 pam-auth-update --enable mkhomedir
+
+## SET TIMEZONE to ${SAMBA4_TIMEZONE}
+#timedatectl set-timezone ${SAMBA4_TIMEZONE}
 
 ## "join domain ${SAMBA4_REALM_DOMAIN_NAME}"
 # adcli join -v --one-time-password=secret1234 ${SAMBA4_REALM_DOMAIN_NAME}

@@ -27,16 +27,16 @@ echo "
 /home/users/701076/l    /etc/auto.users.701076.l        --ghost
 #
 # HOME - directories für pupils BRG
-/home/users/701036/l    /etc/auto.users.701036.s        --ghost
+/home/users/701036/s    /etc/auto.users.701036.s        --ghost
 #
 # HOME - directories für pupils GfB
-/home/users/701076/l    /etc/auto.users.701076.s        --ghost
+/home/users/701076/s    /etc/auto.users.701076.s        --ghost
 #
 # HOME - directories für Verwaltung BRG
-/home/users/701036/l    /etc/auto.users.701036.v        --ghost
+/home/users/701036/v    /etc/auto.users.701036.v        --ghost
 #
 # HOME - directories für Verwaltung GfB
-/home/users/701076/l    /etc/auto.users.701076.v        --ghost
+/home/users/701076/v    /etc/auto.users.701076.v        --ghost
 #
 # RETURN - directories für Testees BRG
 /home/users/701036/t    /etc/auto.users.701036.v        --ghost
