@@ -14,18 +14,18 @@
 
 #### START DEFINE PARAMETER
 
-PRINTER_NAME="Raum-314-Printer"
-PRINTER_LOCATION="Drucker im Raum 314"
-# ATTENTION: r003pr01:443 because r003pr01:631 will not work 
-PRINTER_CONNECTION="ipps://r314pr01:443/ipp/print"
-# PRINTER_CONNECTION="ipp://r003pr01:631/ipp/print" works
+PRINTER_NAME="Bibliothek-Printer"
+PRINTER_LOCATION="Drucker Bibliothek"
+# ATTENTION: r002pr01:443 because r002pr01:631 will not work 
+PRINTER_CONNECTION="ipps://r007pr01:443/ipp/print"
+# PRINTER_CONNECTION="ipp://r002pr01:631/ipp/print" works
 
 ## HELP to find printer modell:
 ## Find Print Driver with:
 ## >> lpinfo --make-and-model 'Lexmark' -m
 
-# ATTENTION: r003pr01:443 
-PRINTER_DRIVER="driverless:ipps://r314pr01:443/ipp/print"
+# ATTENTION: r002pr01:443 
+PRINTER_DRIVER="driverless:ipps://r007pr01:443/ipp/print"
 
 #### END DEFINE PARAMETER
 
