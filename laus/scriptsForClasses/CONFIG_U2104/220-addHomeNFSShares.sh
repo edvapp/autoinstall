@@ -39,10 +39,10 @@ echo "
 /home/users/701076/v    /etc/auto.users.701076.v        --ghost
 #
 # RETURN - directories für Testees BRG
-/home/users/701036/t    /etc/auto.users.701036.v        --ghost
+/home/users/701036/t    /etc/auto.users.701036.t        --ghost
 #
 # RETURN - directories für Testees GfB
-/home/users/701076/t    /etc/auto.users.701076.v        --ghost
+/home/users/701076/t    /etc/auto.users.701076.t        --ghost
 #
 " >> /etc/auto.master
 
@@ -67,25 +67,25 @@ echo "
 *	-fstype=nfs4,sec=krb5	ad01f1:/701076/v/&
 " > /etc/auto.users.701076.v
 
+## sec != krb5
 ## create config file for Testees BRG
 echo "
-*	-fstype=nfs4,sec=krb5	ad01f1:/701036/t/&
+*	-fstype=nfs4	fs02:/701036/t/&
 " > /etc/auto.users.701036.t
 
 ## create config file for Testees GfB
 echo "
-*	-fstype=nfs4,sec=krb5	ad01f1:/701076/t/&
+*	-fstype=nfs4	fs02:/701076/t/&
 " > /etc/auto.users.701076.t
 
-## sec != krb5
 ## create config file for pupils BRG
 echo "
-*	-fstype=nfs4    	ad01f1:/701036/s/&
+*	-fstype=nfs4    	fs02:/701036/s/&
 " > /etc/auto.users.701036.s
 
 ## create config file for pupils GfB
 echo "
-*	-fstype=nfs4    	ad01f1:/701076/s/&
+*	-fstype=nfs4    	fs02:/701076/s/&
 " > /etc/auto.users.701076.s
 
 
