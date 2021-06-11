@@ -7,9 +7,17 @@ then
 	case "$1" in
 	start)
 		# disable WWW
+		# set Policy DROP for chain OUTPUT
 		/sbin/iptables -P OUTPUT DROP
-		/sbin/iptables -I OUTPUT -d 10.0.0.0/8 -j ACCEPT 
-		/sbin/iptables -I OUTPUT -d 127.0.0.0/24 -j ACCEPT 
+		
+		# Insert rule ACCEPT for destination 127.0.0.0/24
+		/sbin/iptables -I OUTPUT -d 127.0.0.0/24 -j ACCEPT
+		
+		# Insert rule ACCEPT for destination 10.0.0.0/8
+		/sbin/iptables -I OUTPUT -d 10.0.0.0/8 -j ACCEPT
+		
+		# Insert rule DROP for destination 10.0.0.12 = lehrmaterial
+		/sbin/iptables -I OUTPUT -d 10.0.0.12 -j DROP
 		;;
 	stop)
 		# enable WWW

@@ -1,25 +1,27 @@
 #!/bin/bash
 
-if [[ $USER == testee* ]];
+if [[ ${USER} == testee* ]];
 then
-	if [ ! -d $HOME/Abgabe_$USER ];
+	## we extract SCHOOLNUMBER from username testee_701036_001
+	SCHOOL_NUMBER=${USER:7:6}
+	if [ ! -d ${HOME}/Abgabe_$USER ];
 	then
-		ln -s /home/shares/schueler/Testees/Abgabe_$USER $HOME/Abgabe_$USER
+		ln -s /home/users/${SCHOOL_NUMBER}/${USER} ${HOME}/Abgabe_${USER}
 	fi
 
-	if [ ! -d $HOME/Abgabe_Vorlagen ];
+	if [ ! -d ${HOME}/Abgabe_Vorlagen ];
 	then
-		ln -s /home/shares/schueler/Testees/Vorlagen/ $HOME/Abgabe_Vorlagen
+		ln -s /home/users/${SCHOOL_NUMBER}/t/Vorlagen/ ${HOME}/Abgabe_Vorlagen
 	fi
 
-	if [ ! -d $HOME/Schreibtisch/Abgabe_$USER ];
+	if [ ! -d ${HOME}/Schreibtisch/Abgabe_${USER} ];
 	then
-		ln -s /home/shares/schueler/Testees/Abgabe_$USER $HOME/Schreibtisch/Abgabe_$USER
+		ln -s /home/users/${SCHOOL_NUMBER}/${USER} ${HOME}/Schreibtisch/Abgabe_${USER}
 	fi
 
-	if [ ! -d $HOME/Schreibtisch/Vorlagen ];
+	if [ ! -d ${HOME}/Schreibtisch/Vorlagen ];
 	then
-		ln -s /home/shares/schueler/Testees/Vorlagen/ $HOME/Schreibtisch/Vorlagen
+		ln -s /home/users/${SCHOOL_NUMBER}/t/Vorlagen/ ${HOME}/Schreibtisch/Vorlagen
 	fi	
 fi
 
