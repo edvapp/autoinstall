@@ -272,8 +272,8 @@ done &
 # Set extraoptions
 echo "Set Display Settings/Supress Notifications"
 VBoxManage setextradata global GUI/SuppressMessages confirmGoingFullscreen,confirmInputCapture,remindAboutAutoCapture,remindAboutWrongColorDepth,remindAboutMouseIntegration
-echo "Move Host Key form >>Strg right<< to >>AltGr<<"
-VBoxManage setextradata global GUI/Input/HostKeyCombination 65027
+#echo "Move Host Key form >>Strg right<< to >>AltGr<<"
+#VBoxManage setextradata global GUI/Input/HostKeyCombination 65027
 
 VBoxManage setextradata $MACHINE_NAME GUI/Fullscreen on
 VBoxManage setextradata $MACHINE_NAME GUI/ShowMiniToolBar no
